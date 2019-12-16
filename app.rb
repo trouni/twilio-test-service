@@ -18,7 +18,7 @@ post '/send' do
         )
     when 'whatsapp'
         client.messages.create(
-            from: "whatsapp:#{from}",
+            from: "whatsapp:+14155238886",
             to: "whatsapp:#{data['to']}",
             media_url: [data['mediaUrl']],
             body: data['message']
