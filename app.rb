@@ -20,7 +20,7 @@ post '/send' do
         client.messages.create(
             from: "whatsapp:#{from}",
             to: "whatsapp:#{data['to']}",
-            media_url: data['mediaUrl'],
+            media_url: [data['mediaUrl']],
             body: data['message']
         )
     end
