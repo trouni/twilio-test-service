@@ -14,13 +14,14 @@ post '/send' do
         client.messages.create(
             from: from,
             to: data['to'],
-            body: data['message'],
+            body: data['message']
         )
     when 'whatsapp'
         client.messages.create(
             from: "whatsapp:#{from}",
-            to: "whatsapp:#{data['to']}"
+            to: "whatsapp:#{data['to']}",
             media_url: data['mediaUrl'],
-            body: data['message'],
+            body: data['message']
         )
+    end
 end
